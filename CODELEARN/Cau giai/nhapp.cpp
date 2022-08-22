@@ -1,0 +1,29 @@
+// N so fibonacci dau tien
+#include<iostream>
+using namespace std;
+
+int fibonacci(int n){
+    if(n<0){
+        return -1;}
+
+    else if(n==1 || n==2){
+        return 1;
+        }
+    return fibonacci(n-1) + fibonacci(n-2);
+    }
+
+
+int main(){
+    int n;
+    cin >> n;
+    for(int i = 0; i<n;i++){
+    cout << fibonacci(i) << " " ;
+    }
+    int sum=0;
+    for(int i = 0; i<n;i++){
+    sum += fibonacci(i);
+    }
+    cout << endl << sum;
+    return 0;
+}
+
